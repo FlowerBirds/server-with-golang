@@ -57,4 +57,17 @@ go mod verdor
 ```
 所有import的包将会被复制到当前vendor目录下，新import的包需要再次执行此命令
 
+### 使用make编译调试
+
+```shell
+make
+```
+
+### 构建docker镜像并运行
+```shell
+docker build . -t golang-server
+
+docker run -it --rm -p 9000:9000 golang-server
+```
+
 
